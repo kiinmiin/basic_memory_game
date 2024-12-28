@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+}
+
+.heading-container {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.gameheading {
+    color: #FF5733; 
+    font-size: 2rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.game-heading {
+    font-size: 1.5rem; 
+    color: #333; 
+}
+
+.cards-container {
+    display: grid;
+    grid-template-rows: repeat(3, 125px); 
+    grid-template-columns: repeat(4, 200px); 
+    grid-gap: 20px 10px; 
+    place-items: center; 
+}
+
+@media screen and (max-width: 767px) {
+    .cards-container {
+        grid-template-rows: repeat(4, 125px); 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-gap: 10px; 
+    }
+}
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+  }
+  
+  .move-counter {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .restart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FFC300;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .restart-button:hover {
+    background-color: #FF5733;
+  }
+  

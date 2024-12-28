@@ -1,0 +1,252 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav  {
+background-color: #DAF7A6;
+padding: 15px;
+width: 100%;
+text-align: center;
+margin-bottom: 20px;
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+justify-content: center;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+nav ul li a {
+color:  #FFC300;
+text-decoration: none;
+padding: 8px 15px;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+nav ul li a:hover {
+background-color: #FF5733;
+}
+
+h1, h2 {
+  text-align: center;
+} 
+
+/* medium heading */
+.m-heading {
+font-size: 2rem;
+margin-bottom: 0.75rem;
+line-height: 1.1;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-container{
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  row-gap: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-image: linear-gradient(90deg, #fffbd5, #ccc);
+}
+
+.cards-container{
+  display: grid;
+  grid-template-rows: 125px 125px 125px;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 20px 10px;
+  place-items: center;
+}
+
+.heading-container{
+  text-align: center;
+}
+
+.gameheading{
+  color: #FF5733;
+}
+
+.card{
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.outline-image{
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+
+.card-image{
+  height: 125px;
+  width: 125px;
+  transform: rotateY(90deg); 
+  transition: all ease-in 0.25s;
+  mix-blend-mode: multiply;
+}
+
+.progress-container{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 50px 0 20px 0;
+}
+
+.move-counter{
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.restart-button{
+  padding: 10px 20px;
+  background-color:  #FFC300;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.restart-button:hover{
+  background-color: transparent;
+  border: 1px solid  #FFC300;
+  color:  #FFC300;
+}
+
+/* Dynamic classes that are being added by JavaScript */
+.toggled .card-image { 
+  transform: rotateY(0deg); 
+  transition-delay: 0.25s; 
+} 
+
+.item .outline-image { 
+  transition: all ease-in 0.25s; 
+  transition-delay: 0.25s; 
+} 
+
+.toggled .outline-image { 
+  transform: rotateY(90deg); 
+  transition-delay: 0s; 
+}
+
+@media screen and (max-width: 767px) {
+  .game-container{
+      width: 100%;
+  }
+  
+  .cards-container{
+      grid-template-rows: 125px 125px 125px 125px;
+      grid-template-columns: 33% 33% 33%;
+      grid-gap: 10px 10px;
+  }
+
+  .outline-image{
+      height: 100px;
+      width: 100px;
+  }
+  
+  .card-image{
+      height: 100px;
+      width: 100px;
+  }
+
+  .progress-container{
+      margin: 10px 0 10px 0;
+  }
+  
+}
+/* contact */
+.contact-section {
+background-color: #DAF7A6;
+padding: 2rem;
+display: flex;
+justify-content: center;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  width: 100%;
+  color: #333;
+  position: relative;
+}
+.contact-form {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+.contact-form .form-group label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+.contact-form .submit-btn {
+  background-color: #d9d9d9;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.contact-icons {
+  display: flex;
+  gap: 1rem;
+}
+.contact-icons a {
+  color: #333;
+  font-size: 1.5rem;
+}
+.contact-icons a:hover {
+  color: #715B64;
+}
+/* footer */
+#footer {
+background-color: #172A3A;
+color: #fff;
+padding: 1rem;
+text-align: center;
+}
+#footer p {
+color: #fff;
+font-size: 1rem;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#footer p::before {
+content: "\00A9";
+margin-right: 0.5rem;
+}
