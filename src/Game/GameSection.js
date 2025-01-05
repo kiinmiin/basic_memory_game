@@ -7,10 +7,17 @@ const GameSection = () => {
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
   const [moves, setMoves] = useState(0);
+  const [gameCompleted, setGameCompleted] = useState(false); 
 
   useEffect(() => {
     initializeGame();
   }, []);
+
+  useEffect(() => {
+    if (matchedCards.length === cards.length && cards.length > 0) {
+      setGameCompleted(true);
+    } 
+  }, [matchedCards, cards]); 
 
   const initializeGame = () => {
     const shuffleCards = () => {
@@ -33,6 +40,7 @@ const GameSection = () => {
     setFlippedCards([]);
     setMatchedCards([]);
     setMoves(0);
+    setGameCompleted(false);
   };
 
   const handleCardClick = (card) => {
@@ -53,7 +61,7 @@ const GameSection = () => {
   };
 
   return (
-    <div className="container">
+    <div id="game" className="container">
       <div className="heading-container">
         <h1 className="gameheading">Memory Card Game</h1>
         <h2 className="game-heading">Match the cards!</h2>
@@ -64,6 +72,16 @@ const GameSection = () => {
           Restart Game
         </button>
       </div>
+      {/* Tingimuslik renderdamine */}
+      {gameCompleted ? (
+        <div className="victory-message">
+          <h2>Congratulations!</h2>
+          <p>You completed the game in {moves} moves!</p>
+          <button className="restart-button" onClick={initializeGame}>
+            Play Again
+          </button>
+        </div>
+      ) : (  
       <div className="cards-container">
         {cards.map((card) => (
           <Card
@@ -74,6 +92,7 @@ const GameSection = () => {
           />
         ))}
       </div>
+      )} 
     </div>
   );
 };

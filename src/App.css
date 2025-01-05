@@ -250,3 +250,6 @@ justify-content: center;
 content: "\00A9";
 margin-right: 0.5rem;
 }
+html {
+  scroll-behavior: smooth;
+} 

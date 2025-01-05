@@ -5,10 +5,10 @@ const Card = ({ card, handleClick, flipped }) => {
   return (
     <div className={`card ${flipped ? "flipped" : ""}`} onClick={() => handleClick(card)}>
       <div className="card-inner">
-        {/* Back Side */}
+        {/* Taga pool */}
         <div className="outline-image" />
 
-        {/* Front Side */}
+        {/* Ees pool */}
         <img
           className="card-image"
           src={card.image}
