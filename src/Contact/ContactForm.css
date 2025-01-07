@@ -42,7 +42,14 @@
     cursor: pointer;
   }
   
+  .contact-icons {
+    display: flex;
+    gap: 1rem;
+  } 
+  .contact-icons a {
+    color: #333;
+    font-size: 1.5rem;
+  } 
   .contact-icons a:hover {
     color: #715B64;
-  }
-  
+  } 

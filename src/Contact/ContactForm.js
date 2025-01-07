@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './ContactForm.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';   
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -85,6 +88,10 @@ const ContactForm = () => {
             Send
           </button>
         </form>
+        <div class="contact-icons">
+          <a href="mailto:rasmo.kiin@voco.ee"><FontAwesomeIcon icon={faEnvelope} /></a>
+          <a href="https://github.com/kiinmiin" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+        </div>
       </div>
     </section>
   );
